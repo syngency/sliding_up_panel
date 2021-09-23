@@ -517,6 +517,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel> with SingleTickerProvid
 
   //close the panel
   Future<void> _close() {
+    _sc.jumpTo(0.0);
     _scrollingEnabled = false;
     return _ac.fling(velocity: -1.0);
   }
